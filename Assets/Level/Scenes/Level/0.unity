@@ -2132,23 +2132,463 @@ MonoBehaviour:
   - IsClicked: 0
     Seconds: 152
     Lane: 3
-    Length: 1
+    Length: 0
   - IsClicked: 0
     Seconds: 152.125
     Lane: 0
-    Length: 1
+    Length: 0
   - IsClicked: 0
     Seconds: 152.25
     Lane: 3
-    Length: 1
+    Length: 0
   - IsClicked: 0
     Seconds: 152.375
     Lane: 0
-    Length: 1
+    Length: 0
   - IsClicked: 0
     Seconds: 152.5
     Lane: 3
-    Length: 1
+    Length: 0
+  - IsClicked: 0
+    Seconds: 152.625
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 152.75
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 152.875
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 153
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 153.125
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 153.25
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 153.375
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 153.5
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 153.625
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 153.75
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 153.875
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 154
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 154.125
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 154.25
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 154.375
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 154.5
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 154.625
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 154.75
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 154.875
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 155
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 155.125
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 155.25
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 155.375
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 155.5
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 155.625
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 155.75
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 155.875
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 156
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 156.125
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 156.25
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 156.375
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 156.5
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 156.625
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 156.75
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 156.875
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 157
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 157.125
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 157.25
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 157.375
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 157.5
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 157.625
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 157.75
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 157.875
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 159
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 159.5
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 160
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 160.5
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 161
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 162
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 162.5
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 163
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 164
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 164.5
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 165
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 166
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 166.5
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 167
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 168
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 169
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 170
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 171
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 172
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 172.25
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 172.5
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 172.75
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 173.25
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 174
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 174.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 174.5
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 174.75
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 175.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 176
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 176.25
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 176.5
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 176.75
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 177.25
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 178
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 178.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 178.5
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 178.75
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 179.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 180
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 181
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 182
+    Lane: 3
+    Length: 0
+  - IsClicked: 0
+    Seconds: 183
+    Lane: 0
+    Length: 0
+  - IsClicked: 1
+    Seconds: 185.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 187.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 189.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 191.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 192.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 193.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 194.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 195.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 196.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 197.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 198.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 199.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 200.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 201.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 202.75
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 203
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 203.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 204.75
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 205
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 205.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 206.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 206.5
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 206.75
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 207.25
+    Lane: 0
+    Length: 0
+  - IsClicked: 0
+    Seconds: 208.25
+    Lane: 0
+    Length: 0
   _hitCount: 0
   _wrongCount: 0
   _missCount: 0

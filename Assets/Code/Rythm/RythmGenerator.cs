@@ -219,10 +219,13 @@ public class RythmGenerator : MonoBehaviour
         float current = 152f;
         for(int i = 188; i < 250; i++)
         {
+            longer[i] = new Rythm();
             longer[i].Lane = ((i+1) % 2) * 3;
-            longer[i].Seconds = 152f;
+            longer[i].Seconds = current;
             current += 0.125f;
         }
+
+        _rythm = longer;
     }
 #endif
 }
