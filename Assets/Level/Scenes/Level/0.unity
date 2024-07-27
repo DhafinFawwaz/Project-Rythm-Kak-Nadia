@@ -1766,12 +1766,388 @@ MonoBehaviour:
     Lane: 0
     Length: 1
   - IsClicked: 0
+    Seconds: 78
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
     Seconds: 80
     Lane: 3
     Length: 1
   - IsClicked: 0
     Seconds: 80.5
     Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 82
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 82
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 84
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 84.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 86
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 86
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 88
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 88.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 90
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 90
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 92
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 92.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 94
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 95
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 96
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 97
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 97.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 98
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 99
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 100
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 101
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 101.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 102
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 103
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 104
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 105
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 105.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 106
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 106.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 107
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 107.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 120
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 121
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 121.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 122
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 123
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 123.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 124
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 125
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 125.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 126
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 127
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 127.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 128
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 129
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 129.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 130
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 131
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 131.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 132
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 133
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 133.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 134
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 135
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 135.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 136
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 144
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 144.25
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 144.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 144.75
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 145
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 145.25
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 145.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 145.75
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 146
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 146.25
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 146.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 146.75
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 147
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 147.25
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 147.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 147.75
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 148
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 148.25
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 148.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 148.75
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 149
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 149.25
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 149.5
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 149.75
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 150
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 150.25
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 150.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 150.75
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 151
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 151.25
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 151.5
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 151.75
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 152
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 152.125
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 152.25
+    Lane: 3
+    Length: 1
+  - IsClicked: 0
+    Seconds: 152.375
+    Lane: 0
+    Length: 1
+  - IsClicked: 0
+    Seconds: 152.5
+    Lane: 3
     Length: 1
   _hitCount: 0
   _wrongCount: 0

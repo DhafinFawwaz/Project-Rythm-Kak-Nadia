@@ -204,5 +204,26 @@ public class RythmGenerator : MonoBehaviour
         _updateSliderByDragging = false;
         _progressSlider.onValueChanged.RemoveListener(ChangeTime);
     }
+
+
+#if UNITY_EDITOR
+    [ContextMenu("Add Custom")]
+    public void AddCustom()
+    {
+        Rythm[] longer = new Rythm[250];
+        for(int i = 0; i < _rythm.Length; i++)
+        {
+            longer[i] = _rythm[i];
+        }
+
+        float current = 152f;
+        for(int i = 188; i < 250; i++)
+        {
+            longer[i].Lane = ((i+1) % 2) * 3;
+            longer[i].Seconds = 152f;
+            current += 0.125f;
+        }
+    }
+#endif
 }
 
