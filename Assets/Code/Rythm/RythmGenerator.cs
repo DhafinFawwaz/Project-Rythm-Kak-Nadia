@@ -62,8 +62,24 @@ public class RythmGenerator : MonoBehaviour
     [SerializeField] UnityEvent<Rythm[], float> _onRythmGenerated;
     void Start()
     {
+        _videoTimeOffset = PlayerPrefs.GetFloat("VideoTimeOffset", 0);
         _reader = new RythmReader(_apiURL);
         GenerateRythm();
+    }
+
+
+    [Header("Settings Timing")]
+    [SerializeField] float _minInput = 0;
+    [SerializeField] float _maxInput = 20;
+    [SerializeField] float _minOutput = -2;
+    [SerializeField] float _maxOutput = 2;
+    float remap(float value, float from1, float to1, float from2, float to2)
+        => (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+    public void SetVideoTimeOffset(float timeOffset)
+    {
+        timeOffset = remap(timeOffset, _minInput, _maxInput, _minOutput, _maxOutput);
+        PlayerPrefs.SetFloat("VideoTimeOffset", timeOffset);
+        _videoTimeOffset = timeOffset;
     }
 
 
@@ -109,13 +125,15 @@ public class RythmGenerator : MonoBehaviour
         if(_moveCameraCoroutine != null) StopCoroutine(_moveCameraCoroutine);
         _moveCameraCoroutine = StartCoroutine(MoveCamera());
     }
+
+    [SerializeField] float _videoTimeOffset = -0.1f;
     IEnumerator MoveCamera()
     {
         Transform cam = Camera.main.transform;
         while (true)
         {
             // _elapsedTime += Time.deltaTime;
-            _elapsedTime = _videoPlayer.time;
+            _elapsedTime = _videoPlayer.time + _videoTimeOffset;
             // if(!_audioSource.isPlaying && _elapsedTime >= 0) _audioSource.Play();
             
             cam.position = new Vector3(cam.position.x, (float)(_elapsedTime+_offsetTime) * _speedMultiplier, cam.position.z);

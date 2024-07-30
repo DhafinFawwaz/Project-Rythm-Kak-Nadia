@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7732129099575342303, guid: cee637df185e99d47a311faac532fc53, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
+      value: ReliefSelect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cee637df185e99d47a311faac532fc53, type: 3}
 --- !u!224 &116152374 stripped
@@ -1584,6 +1588,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1700406928244517434, guid: 64c26d55614de0243829fa84cf42ad5e, type: 3}
+      propertyPath: _speed
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1700406928244517434, guid: 64c26d55614de0243829fa84cf42ad5e, type: 3}
       propertyPath: _onPageChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

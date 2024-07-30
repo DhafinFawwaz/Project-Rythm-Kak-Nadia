@@ -1428,7 +1428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 213149602786222043, guid: 8b163fc399643414aa2fc7a227e14cc9, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
-      value: LevelSelect
+      value: ReliefSelect
       objectReference: {fileID: 0}
     - target: {fileID: 213149602786222043, guid: 8b163fc399643414aa2fc7a227e14cc9, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1867,6 +1867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[ButtonUI] Back'
       objectReference: {fileID: 0}
+    - target: {fileID: 7732129099575342301, guid: cee637df185e99d47a311faac532fc53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7732129099575342302, guid: cee637df185e99d47a311faac532fc53, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2016,6 +2020,14 @@ PrefabInstance:
     - target: {fileID: 5148395573347416275, guid: 4dd386f9577fffa4aa59fc67ee884d9a, type: 3}
       propertyPath: m_Name
       value: BlackFadeVideoPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148395573857369200, guid: 4dd386f9577fffa4aa59fc67ee884d9a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 128.47223
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148395573857369200, guid: 4dd386f9577fffa4aa59fc67ee884d9a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 128.47223
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dd386f9577fffa4aa59fc67ee884d9a, type: 3}

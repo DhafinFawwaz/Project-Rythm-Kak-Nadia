@@ -33,6 +33,7 @@ public class SettingsManager : MonoBehaviour
         // _soundSlider.SetValueWithoutNotify(soundVolume);
         _musicSlider.SetValue(musicVolume);
         _soundSlider.SetValue(soundVolume);
+        _videoTimeOffsetSlider.SetValue(remap(PlayerPrefs.GetFloat("VideoTimeOffset"), _minOutput, _maxOutput, _minInput, _maxInput));
 
 
         // Resolution dropdown
@@ -74,5 +75,20 @@ public class SettingsManager : MonoBehaviour
     public void OnResolutionValueChanged(int resolutionIndex)
         => ResolutionManager.SetResolution(resolutionIndex);
 
+
+    [Header("Video Time Offset")]
+    [SerializeField] float _minInput;
+    [SerializeField] float _maxInput;
+    [SerializeField] float _minOutput;
+    [SerializeField] float _maxOutput;
+    float remap(float value, float from1, float to1, float from2, float to2)
+        => (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+    public void SetVideoTimeOffset(float timeOffset)
+    {
+        timeOffset = remap(timeOffset, _minInput, _maxInput, _minOutput, _maxOutput);
+        PlayerPrefs.SetFloat("VideoTimeOffset", timeOffset);
+    }
+
+    [SerializeField] SliderUI _videoTimeOffsetSlider;
 
 }
