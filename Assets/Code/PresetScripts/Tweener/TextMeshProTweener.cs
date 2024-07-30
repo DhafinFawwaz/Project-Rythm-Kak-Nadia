@@ -26,17 +26,17 @@ namespace DhafinFawwaz.Tweener
             foreach (var c in _coroutines) StopCoroutineIfNotNull(c);
         }
 
-        TextMeshProTweener SetStart(long start)
+        public TextMeshProTweener SetStart(long start)
         {
             _start = start;
             return this;
         }
-        TextMeshProTweener SetEnd(long end)
+        public TextMeshProTweener SetEnd(long end)
         {
             _end = end;
             return this;
         }
-        TextMeshProTweener SetFormat(string format)
+        public TextMeshProTweener SetFormat(string format)
         {
             _numericFormat = format;
             return this;

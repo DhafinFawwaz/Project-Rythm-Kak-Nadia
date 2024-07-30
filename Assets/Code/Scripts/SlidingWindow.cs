@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SlidingWindow : MonoBehaviour
 {
@@ -75,10 +76,12 @@ public class SlidingWindow : MonoBehaviour
         _key++;
     }
 
+    [SerializeField] UnityEvent<int> _onPageChange;
     public void GoToPage(int page)
     {
         _page = page;
         StartCoroutine(TaskLocalPosition(transform, transform.localPosition, new Vector3(_page*_pageLength, 0, 0), 0.35f, Ease.OutQuart));
+        _onPageChange?.Invoke(-_page);
     }
 
     public void NextPage()
@@ -101,6 +104,7 @@ public class SlidingWindow : MonoBehaviour
     {
         float landedPage = transform.localPosition.x/_pageLength;
         _page = Mathf.RoundToInt(landedPage);
+        _onPageChange?.Invoke(-_page);
         StartCoroutine(TaskLocalPosition(transform, transform.localPosition, new Vector3(_page*_pageLength, 0, 0), 0.35f, Ease.OutQuart));
     }
 

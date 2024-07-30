@@ -8,5 +8,6 @@ public class Main
         Singleton.Initialize();
         ResolutionManager.Initialize();
         Save.Initialize();
+        Application.targetFrameRate = 60;
     }
 }

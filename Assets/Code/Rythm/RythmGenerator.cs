@@ -27,10 +27,37 @@ public class RythmGenerator : MonoBehaviour
     [SerializeField] bool _useEditorData = false;
     [SerializeField] Rythm[] _rythm;
 
+    [Header("Win ")]
+    [SerializeField] float[] _winTime = new float[3];
+    bool[] _isWin = new bool[3];
+    [SerializeField] UnityEvent<int> _onWin;
+    [SerializeField] UnityEvent _onWinAll;
+
     [Header("Result")]
     [SerializeField] int _hitCount;
+    public int HitCount => _hitCount;
     [SerializeField] int _wrongCount;
-    [SerializeField] int _missCount;
+    public int WrongCount => _wrongCount;
+    // [SerializeField] int _missCount;
+    public int GetHitableCount(int level) {
+        int count = 0;
+
+        if(level == 0) {
+            foreach (var rythm in _rythm)
+                if(rythm.Seconds < _winTime[level]) count++;
+        } else if(level == 1) {
+            foreach (var rythm in _rythm)
+                if(rythm.Seconds >= _winTime[level-1] && rythm.Seconds <= _winTime[level])
+                    count++;
+        } else if(level == 2) {
+            foreach (var rythm in _rythm)
+                if(rythm.Seconds >= _winTime[level-1])
+                    count++;
+        }
+
+        return count;
+    }
+
 
     [SerializeField] UnityEvent<Rythm[], float> _onRythmGenerated;
     void Start()
@@ -73,7 +100,6 @@ public class RythmGenerator : MonoBehaviour
         _onRythmGenerated?.Invoke(_rythm, _speedMultiplier);
     }
 
-
     [SerializeField] double _elapsedTime;
     [SerializeField] float _offsetTime = 0.2f;
     Coroutine _moveCameraCoroutine;
@@ -88,7 +114,8 @@ public class RythmGenerator : MonoBehaviour
         Transform cam = Camera.main.transform;
         while (true)
         {
-            _elapsedTime += Time.deltaTime;
+            // _elapsedTime += Time.deltaTime;
+            _elapsedTime = _videoPlayer.time;
             // if(!_audioSource.isPlaying && _elapsedTime >= 0) _audioSource.Play();
             
             cam.position = new Vector3(cam.position.x, (float)(_elapsedTime+_offsetTime) * _speedMultiplier, cam.position.z);
@@ -97,11 +124,118 @@ public class RythmGenerator : MonoBehaviour
             // Check if all rythm has passed
             // if(_elapsedTime > _rythm[_rythm.Length-1].Seconds + _rythm[_rythm.Length-1].Length + _winTolerance) break;
             
+
+            // Combo check
+            UpdateCurrentRythm();
+
+
+            // win check
+            for(int i = 0; i < _winTime.Length; i++)
+            {
+                if(_isWin[i]) continue;
+                if(_elapsedTime > _winTime[i])
+                {
+                    if(i == 2) // hard coded here
+                    {
+                        _isWin[i] = true;
+                        int hitCount = 0;
+                        foreach (var rythm in _rythm)
+                        {
+                            if(rythm.IsClicked) hitCount++;
+                        }
+                        int hitableCount = GetHitableCount(2);
+                        if(hitableCount < hitableCount/2) { // lose
+                            WinManager.IsWin = true;
+                        } else {
+                            WinManager.IsWin = false;
+                        }
+                        WinManager.HitCount = hitCount;
+                        _onWinAll?.Invoke();
+                        
+                    } else {
+                        _isWin[i] = true;
+                        _onWin?.Invoke(i);
+                        _hitCount = 0;
+                        _wrongCount = 0;
+                    }
+
+                }
+            }
+
             yield return null;
+            if(_pause) yield return new WaitUntil(() => !_pause);
         }
-        _missCount = _rythm.Length - _hitCount;
 
     }
+
+    [SerializeField] LineRenderer _currentRythm;
+    [SerializeField] int _currentRythmIndex = 0;
+
+    [SerializeField] float _missYTolerance = 1;
+    void UpdateCurrentRythm()
+    {
+        if(_currentRythm == null) _currentRythm = FindNextNearestRythm(out _currentRythmIndex);
+        float clickableY = _rythmClickables[0].transform.position.y;
+        if(_currentRythm.transform.position.y < clickableY+_missYTolerance)
+        {
+            if(!_rythm[_currentRythmIndex].IsClicked) {
+                _onMiss?.Invoke();
+            }
+            _currentRythm = FindNextNearestRythm(out _currentRythmIndex);
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        if(_currentRythm == null) return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(_currentRythm.transform.position, 1f);
+    }
+
+    [SerializeField] UnityEvent _onMiss;
+    [SerializeField] UnityEvent _onHit;
+    LineRenderer FindNextNearestRythm(out int index)
+    {
+        index = 0;
+        float clickableY = _rythmClickables[0].transform.position.y;
+        
+        float minDistance = float.MaxValue;
+
+        int currentIndex = 0;
+        foreach(var line in _lineList)
+        {
+            float diff = line.transform.position.y - clickableY;
+            if(diff < 0) {
+                currentIndex++;
+                continue;
+            }
+            if(diff < minDistance)
+            {
+                minDistance = diff;
+                _currentRythm = line;
+                index = currentIndex;
+            }
+
+            currentIndex++;
+        }
+
+        return _currentRythm;
+    }
+
+    // Pause
+    bool _pause = false;
+    public void Pause()
+    {
+        _pause = true;
+        _videoPlayer.Pause();
+    }
+    public void Resume()
+    {
+        _pause = false;
+        _videoPlayer.Play();
+    }
+    //
 
 
     [Header("Debug")]
@@ -144,21 +278,39 @@ public class RythmGenerator : MonoBehaviour
 
         if (isHit) // Hit
         {
-            _rythmClickables[lane].color = Color.green;
+            // _rythmClickables[lane].color = Color.green;
+            Green(_rythmClickables[lane]);
             currentRythm.IsClicked = true;
             _hitCount++;
+            _onHit?.Invoke();
         }
         else // Wrong
         {
-            _rythmClickables[lane].color = Color.red;
+            // _rythmClickables[lane].color = Color.red;
+            Red(_rythmClickables[lane]);
             _wrongCount++;
             if(currentRythm != null) currentRythm.IsClicked = true; // Ensure can only wrong once for each rythm line
+            _onMiss?.Invoke();
         }
+    }
+
+
+    [SerializeField] Sprite _normalSprite;
+    [SerializeField] Sprite _greenSprite;
+    [SerializeField] Sprite _redSprite;
+    void Green(Image img)
+    {
+        img.transform.GetChild(1).GetComponent<Image>().sprite = _greenSprite;
+    }
+
+    void Red(Image img)
+    {
+        img.transform.GetChild(1).GetComponent<Image>().sprite = _redSprite;
     }
 
     public void PointerUpLane(int lane)
     {
-        _rythmClickables[lane].color = Color.white;
+        _rythmClickables[lane].transform.GetChild(1).GetComponent<Image>().sprite = _normalSprite;
     }
 
 
@@ -210,22 +362,9 @@ public class RythmGenerator : MonoBehaviour
     [ContextMenu("Add Custom")]
     public void AddCustom()
     {
-        Rythm[] longer = new Rythm[250];
-        for(int i = 0; i < _rythm.Length; i++)
-        {
-            longer[i] = _rythm[i];
+        for(int i = 156; i < 173; i++) {
+            _rythm[i].Seconds -= 0.1f;
         }
-
-        float current = 152f;
-        for(int i = 188; i < 250; i++)
-        {
-            longer[i] = new Rythm();
-            longer[i].Lane = ((i+1) % 2) * 3;
-            longer[i].Seconds = current;
-            current += 0.125f;
-        }
-
-        _rythm = longer;
     }
 #endif
 }
